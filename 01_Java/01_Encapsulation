@@ -1,0 +1,33 @@
+//Encapsulation demo using keywords 'private' and 'this'.
+
+class Human{
+    private int age=21;
+    private String name = "Sahil";
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        Human h1 = new Human();
+        h1.setAge(22);
+        h1.setName("Mali");
+
+        System.out.println(h1.getName() + " : " + h1.getAge());
+
+    }
+}
