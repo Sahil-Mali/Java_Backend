@@ -1,0 +1,19 @@
+//An object without reference varibale.
+//can only be used once.
+
+class A{
+    public A() {
+        System.out.println("in constructor..");
+    }
+
+    public void show(){
+        System.out.println("in show method...");
+    }
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        new A().show();                         //anonymous object.
+
+    }
+}
