@@ -1,0 +1,27 @@
+//for final variable, method and class.
+
+class Calc{
+    final public void show(){                     //final method
+        System.out.println("in Calc show...");
+    }
+}
+final class AdvCalc extends Calc{                 //final class
+    
+      //if a method is final it cannot be inherited, hence below method causes error.
+//    public void show(){
+//        System.out.println("in AdvCalc show...");
+//    }
+}
+
+//If a class is final it cannot be inherited, hence below class is causing error as it is trying to inherit final class.
+//class ScientificCalc extends AdvCalc{
+//    
+//}
+
+public class Demo {
+    public static void main(String[] args) {
+        final int num = 8;       //final variable
+        //num = 9;               //gives error on trying to change the final variable.
+        
+    }
+}
