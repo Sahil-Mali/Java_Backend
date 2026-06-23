@@ -1,0 +1,17 @@
+public class Demo {
+    public static void main(String[] args) {
+        int num = 8;
+        //Integer num1 = new Integer(10);          //deprecated
+
+        //Integer num2 = new Integer(num);         //boxing: primitive to wrapper.
+        Integer num3 = num;                        //auto-boxing.
+
+        int num4 = num3;                           //auto-unboxing: wrapper to primitive.
+        System.out.println(num4);
+
+        String str = "25";
+        int num5 = Integer.parseInt(str);          //parsing int value from string.
+        System.out.println(num5 + " : " + num5*2);
+
+    }
+}
