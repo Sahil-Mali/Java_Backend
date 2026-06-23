@@ -1,0 +1,45 @@
+import java.util.Objects;
+
+class Laptop{
+    String model;
+    int price;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Laptop laptop = (Laptop) o;
+        return price == laptop.price && Objects.equals(model, laptop.model);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(model, price);
+    }
+
+    @Override
+    public String toString() {
+        return "Laptop{" +
+                "model='" + model + '\'' +
+                ", price=" + price +
+                '}';
+    }
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        Laptop obj1 = new Laptop();
+        obj1.model = "lenovo";
+        obj1.price = 1000;
+
+        Laptop obj2 = new Laptop();
+        obj2.model = "lenovo";
+        obj2.price = 1000;
+
+        System.out.print("Is obj1 = obj2 : " + obj1.equals(obj2) + "\n");
+        System.out.println("------------------------------------");
+        System.out.println(obj1.toString());
+        System.out.println(obj2.toString());
+    }
+
+}
