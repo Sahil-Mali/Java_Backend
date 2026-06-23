@@ -1,0 +1,33 @@
+//use abstract keyword
+//abstract method is a method with no body, only declaration
+//if abstract method is present in a class, then the class needs to be also abstract.
+//but abstract class need not compulsarily have any abstract methods.
+//object of abstract class cannot be instantiated.
+
+abstract class Car{
+    public abstract void drive();
+    public abstract void flying();
+    public void playMusic(){
+        System.out.println("music playing.....!!");
+    }
+}
+abstract class LordWagonR extends Car{
+    public void drive(){
+        System.out.println("driving....");
+    }
+}
+
+class NewLordWagonR extends LordWagonR{
+    public void flying(){
+        System.out.println("flying...");
+    }
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        NewLordWagonR obj = new NewLordWagonR();
+        obj.playMusic();
+        obj.drive();
+        obj.flying();
+    }
+}
