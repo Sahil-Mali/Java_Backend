@@ -1,0 +1,24 @@
+//code inside finally block will always execute.
+//usually used for closing resources.
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Demo {
+    public static void main(String[] args) throws IOException {
+        System.out.println("Enter a number: ");
+
+        BufferedReader bf = null;
+
+        try {
+            bf = new BufferedReader(new InputStreamReader(System.in));
+            int num = Integer.parseInt(bf.readLine());
+            System.out.println(num);
+        }
+        finally{
+            bf.close();
+            System.out.println("Resources closed.");
+        }
+    }
+}
