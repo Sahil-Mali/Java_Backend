@@ -1,0 +1,23 @@
+//using functional interfaces.
+
+
+interface A{
+    void show();
+}
+
+interface B{
+    int add(int a,int b);
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        A obj = () -> System.out.println("in show..");
+        obj.show();
+
+        B obj1 = (i,j) -> i+j;
+        int result = obj1.add(5,6);
+        System.out.println(result);
+
+    }
+
+}
