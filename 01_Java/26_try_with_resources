@@ -1,3 +1,7 @@
+//need to initialize the resources in the parentheses () of the try block.
+//try will automatically close the resources.
+//due to closeable interface.
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
